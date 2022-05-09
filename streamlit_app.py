@@ -19,4 +19,4 @@ my_cur.execute("insert into fruit_load_list values ('From stramlit')")
 my_data_row=my_cur.fetchall()
 streamlit.text("Hello from Snowflake:")
 streamlit.dataframe(my_data_row)
-add_to_fruit =streamlit.text_input("Enter Fruit you want to add:"
+#add_to_fruit =streamlit.text_input("Enter Fruit you want to add:")
