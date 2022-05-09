@@ -15,6 +15,6 @@ fruits_selected=streamlit.multiselect("pick some fruits",list(my_fruit_list.inde
 fruits_to_show=my_fruit_list.loc[fruits_selected]                                                                                     
 streamlit.dataframe(fruits_to_show)
 my_cnx= snowflake.connector.commect(**streamlit.secrets["snowflake"])
-my)cur=my_cnx.cursor()
+my_cur=my_cnx.cursor()
 
 
