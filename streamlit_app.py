@@ -15,7 +15,7 @@ fruits_to_show=my_fruit_list.loc[fruits_selected]
 streamlit.dataframe(fruits_to_show)
 my_cnx= snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur=my_cnx.cursor()
-my_cur.execute("insert into fruit_load_list values ('From stramlit')")
+my_cur.execute("insert into fruit_load_list values ('From streamlit')")
 my_data_row=my_cur.fetchall()
 streamlit.text("Hello from Snowflake:")
 streamlit.dataframe(my_data_row)
