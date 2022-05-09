@@ -14,7 +14,7 @@ fruits_selected=streamlit.multiselect("pick some fruits",list(my_fruit_list.inde
 fruits_to_show=my_fruit_list.loc[fruits_selected]                                                                                     
 streamlit.dataframe(fruits_to_show)
 my_cnx= snowflake.connector.connect(**streamlit.secrets["snowflake"])
-my_cur=my_cnx.cursor()-
+my_cur=my_cnx.cursor()
 my_cur.execute("select * from fruit_load_list")
 my_data_row=my_cur.fetchone()
 streamlit.text("Hello from Snowflake:")
