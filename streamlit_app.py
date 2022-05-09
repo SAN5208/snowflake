@@ -19,5 +19,6 @@ my_cur.execute("select * from fruit_load_list")
 my_data_row=my_cur.fetchall()
 streamlit.text("Hello from Snowflake:")
 streamlit.dataframe(my_data_row)
-add_to_fruit=streamlit.multiselect("pick some fruits",list(my_fruit_list.index))
+add_to_fruit) = input("Enter Fruit you want to add:")
+streamlit.dataframe.add(add_to_fruit)
 
