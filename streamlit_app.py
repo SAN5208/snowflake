@@ -35,5 +35,5 @@ try:
                 back_from_function=insert_row_snowflake(fruit_choice)
                 streamlit.text(back_from_function)
                
- except:
+except:
      streamlit.error("Please check")   
