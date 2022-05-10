@@ -38,11 +38,3 @@ try:
 #except url_error as e:
   #streamlit.error()
  
-streamlit.stop()
-                                                                                 
-streamlit.dataframe(fruits_to_show)
-
-my_cur=my_cnx.cursor()
-my_data_row=my_cur.fetchall()
-streamlit.text("Hello from Snowflake:")
-
