@@ -19,7 +19,7 @@ try:
     fruit_choice =streamlit.text_input("Enter Fruit you want to add:")
     if not fruit_choice:
       streamlit.error("Please select fruit")
-      else:
+    else:
         fruity_vice_response=requests.get("https://fruityvice.com/api/fruit/" +fruit_choice)
         fruity_vice_normalized=pandas.json_normalize(fruity_vice_response.json())
         streamlit.dataframe( fruity_vice_normalized)
