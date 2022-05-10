@@ -3,7 +3,7 @@ import snowflake.connector
 import pandas
 import requests
 
-drf get_fruity_voice_data(this_fruit_choice):
+def get_fruity_voice_data(this_fruit_choice):
         fruity_vice_response=requests.get("https://fruityvice.com/api/fruit/" +fruit_choice)
         fruity_vice_normalized=pandas.json_normalize(fruity_vice_response.json())
         return fruity_vice_normalized
