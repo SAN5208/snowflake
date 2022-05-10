@@ -29,8 +29,7 @@ try:
     fruit_choice =streamlit.text_input("Enter Fruit you want to add:")
     if not fruit_choice:
       streamlit.error("Please select fruit")
-    elsif:
-                streamlit.button('Add a fruit to the list')
+    elif streamlit.button('Add a fruit to the list'):
                 my_cnx= snowflake.connector.connect(**streamlit.secrets["snowflake"])
                 #back_from_function=get_fruity_voi(ce_data(fruit_choice)
                 back_from_function=insert_row_snowflake(fruit_choice)
