@@ -34,6 +34,6 @@ try:
                 #back_from_function=get_fruity_voi(ce_data(fruit_choice)
                 back_from_function=insert_row_snowflake(fruit_choice)
                 streamlit.text(back_from_function)
-                #streamlit.dataframe(back_from_function)
-
- 
+               
+ except:
+     streamlit.error("Please check")   
