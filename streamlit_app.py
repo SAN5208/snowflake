@@ -11,7 +11,7 @@ fruits_selected=streamlit.multiselect("pick some fruits",list(my_fruit_list.inde
 fruits_to_show=my_fruit_list.loc[fruits_selected]    
 
 
-streamlit.dataframe(my_data_row)
+#streamlit.dataframe(my_data_row)
 
 
 streamlit.header('fruity vice fruit advice')
