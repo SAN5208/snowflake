@@ -2,6 +2,13 @@ import streamlit
 import snowflake.connector
 import pandas
 import requests
+
+drf get_fruity_voice_data(this_fruit_choice):
+        fruity_vice_response=requests.get("https://fruityvice.com/api/fruit/" +fruit_choice)
+        fruity_vice_normalized=pandas.json_normalize(fruity_vice_response.json())
+        return fruity_vice_normalized
+    
+
 my_fruit_list = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
 my_fruit_list=my_fruit_list.set_index('Fruit')
 
@@ -11,7 +18,7 @@ fruits_selected=streamlit.multiselect("pick some fruits",list(my_fruit_list.inde
 fruits_to_show=my_fruit_list.loc[fruits_selected]    
 
 
-#streamlit.dataframe(my_data_row)
+
 
 
 streamlit.header('fruity vice fruit advice')
@@ -20,9 +27,8 @@ try:
     if not fruit_choice:
       streamlit.error("Please select fruit")
     else:
-        fruity_vice_response=requests.get("https://fruityvice.com/api/fruit/" +fruit_choice)
-        fruity_vice_normalized=pandas.json_normalize(fruity_vice_response.json())
-        streamlit.dataframe( fruity_vice_normalized)
+        back_from_function=get_fruity_voice_data(fruit_choice)
+        streamlit.dataframe(back_from_function)
 except url_error as e:
   streamlit.error()
  
