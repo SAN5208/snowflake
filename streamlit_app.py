@@ -35,6 +35,5 @@ try:
                 back_from_function=insert_row_snowflake(fruit_choice)
                 streamlit.text(back_from_function)
                 #streamlit.dataframe(back_from_function)
-#except url_error as e:
-  #streamlit.error()
+
  
